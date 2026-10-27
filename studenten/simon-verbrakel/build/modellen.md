@@ -10,11 +10,11 @@
 
 Prompt v3 (`build/prompt.md`), 10 inputs uit `build/test-set.md`, 1 run per setup, elke run in een aparte sessie: `claude -p --model <model> [--effort medium] --tools "" --no-session-persistence`. Verwachte antwoorden niet aangepast. Mijn foutmarge uit `build/foutmarge.md` is 9–10 (Haiku 5.5, 3 runs per versie).
 
-| Setup | Model | Effort | Score (n = 10, 1 run) | Binnen mijn foutmarge? | Input-tokens per run (gemeten) | Output-tokens per run | Kost per run | Per jaar |
-|---|---|---|---:|---|---:|---:|---:|---:|
-| A | Claude Sonnet 5.5 | medium | 8/10 | Nee, 1 punt onder het minimum van 9 | 6.120 | 83,8 | $0,00604 (€0,00544) | $43,47 (€39,13) |
-| B | Claude Haiku 5.5 | standaard (niet ingesteld) | 10/10 | Ja | 5.334 | 319,4 | $0,00042 (€0,00038) | $3,02 (€2,72) |
-| C | Claude Opus 5.5 | standaard (niet ingesteld) | 10/10 | Ja | 4.506 | 154,0 | $0,01348 (€0,01213) | $97,06 (€87,35) |
+| Setup | Model | Effort | Score (n = 10, 1 run) | Binnen mijn foutmarge? | Input-tokens per run (gemeten) | Output-tokens per run | Kost per run | Per jaar (7.200 runs, gecorrigeerd in week 5) | Per jaar (1.100 runs, gecorrigeerd in week 5) |
+|---|---|---|---:|---|---:|---:|---:|---:|---:|
+| A | Claude Sonnet 5.5 | medium | 8/10 | Nee, 1 punt onder het minimum van 9 | 6.120 | 83,8 | $0,00604 (€0,00544) | $43,47 (€39,13) | $6,64 (€5,98) |
+| B | Claude Haiku 5.5 | standaard (niet ingesteld) | 10/10 | Ja | 5.334 | 319,4 | $0,00042 (€0,00038) | $3,02 (€2,72) | $0,46 (€0,42) |
+| C | Claude Opus 5.5 | standaard (niet ingesteld) | 10/10 | Ja | 4.506 | 154,0 | $0,01348 (€0,01213) | $97,06 (€87,35) | $14,83 (€13,35) |
 
 **Fouten:**
 - A (Sonnet): T01 neutraal (juist onzeker), T02 onzeker (juist negatief).
@@ -27,6 +27,7 @@ Prompt v3 (`build/prompt.md`), 10 inputs uit `build/test-set.md`, 1 run per setu
 - Output: het gemiddelde van deze setup over de 10 runs, inclusief denktokens.
 - Voorbeeld B: 2.600 × $0,10 + 319,4 × $0,50 = $420 per miljoen runs = $0,00042 per run.
 - Per jaar: 7.200 runs (600 per maand, uit `build/kosten.md`). 1 dollar = 0,90 euro (aanname, zoals in `build/kosten.md`).
+- Gecorrigeerd in week 5: mijn volume is 5 berichten per werkdag, dus 1.100 runs per jaar (zie `build/kosten.md`). De kolom met 7.200 runs blijft staan. Voorbeeld B: 1.100 × $0,00042 = $0,46 per jaar. De conclusie verandert niet: bij gelijke score is Haiku 5.5 het goedkoopst.
 
 **Zwakke punten:**
 - 1 run per setup, n = 10. Eén fout is 10 procentpunt. Sonnet's 8 had ook toeval kunnen zijn: mijn foutmarge komt van Haiku, niet van Sonnet.
