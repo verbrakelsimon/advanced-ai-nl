@@ -79,6 +79,32 @@ th, td { min-width: 0; }
   </section>
 
   <section>
+    <h2>Grotere testset (set v2)</h2>
+    <p class="big">23 op 30 <span class="muted">(set v2, 1 run)</span></p>
+    <p class="muted">30 inputs, prompt v3, Claude Haiku 5.5, elke input in een aparte sessie. De juiste antwoorden stonden vast voor de run. De 20 nieuwe inputs (T11 tot T30) zijn echte berichten uit de krant: 13 gewone gevallen, 6 randgevallen en 1 onzeker. Maar 2 hebben onzeker als antwoord.</p>
+    <div class="grid">
+      <div class="cell"><span class="muted">T01–T10</span><b>10/10</b></div>
+      <div class="cell"><span class="muted">T11–T30</span><b>13/20</b></div>
+      <div class="cell"><span class="muted">Fouten</span><b class="bad">7</b></div>
+    </div>
+    <div class="wrap" style="margin-top:12px">
+    <table>
+      <thead><tr><th>Input</th><th>Model zei</th><th>Verwacht</th></tr></thead>
+      <tbody>
+        <tr><td>T11</td><td>neutraal</td><td>positief</td></tr>
+        <tr><td>T15</td><td>onzeker</td><td>neutraal</td></tr>
+        <tr><td>T16</td><td>onzeker</td><td>positief</td></tr>
+        <tr><td>T26</td><td>onzeker</td><td>neutraal</td></tr>
+        <tr><td>T27</td><td>niet over defensie</td><td>positief</td></tr>
+        <tr><td>T28</td><td>onzeker</td><td>positief</td></tr>
+        <tr><td>T29</td><td>onzeker</td><td>neutraal</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="muted" style="margin-top:8px">Zes van de zeven fouten zijn onzeker of neutraal waar ik positief of neutraal verwachtte, omdat de tekst geen budget of bestelling noemt. Eén run, dus nog geen foutmarge voor deze set.</p>
+  </section>
+
+  <section>
     <h2>Mijn claim</h2>
     <p>"De vijf voorbeelden in mijn prompt hebben de score verbeterd."</p>
     <p><span class="pill bad">Ingetrokken</span></p>

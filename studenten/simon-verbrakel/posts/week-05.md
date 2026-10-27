@@ -1,13 +1,13 @@
 # Week 5: Is mijn verbetering echt bewezen?
 
 ## Mijn foutmarge
-Ik draaide mijn prompt van week 2 (v1) en mijn laatste prompt (v3) elk 3 keer op dezelfde 10 inputs, met Claude Haiku 5.5. v1 haalde 9, 10 en 9 op 10. v3 haalde 9, 9 en 10 op 10. Beide bereiken zijn 9 tot 10, dus ze overlappen. Mijn claim uit week 4 dat de vijf voorbeelden de score verbeterden, trek ik in. Het verschil valt binnen de foutmarge. T03 is een twijfelgeval: het model zegt onzeker, mijn verwachte antwoord is neutraal. Ik pas dat vóór een volgende run aan, niet nu.
+Ik draaide v1 (week 2) en v3 elk 3 keer op dezelfde 10 inputs, met Claude Haiku 5.5. v1 haalde 9, 10 en 9 op 10. v3 haalde 9, 9 en 10. Beide bereiken zijn 9 tot 10 en overlappen. Mijn claim uit week 4 dat de voorbeelden de score verbeterden, trek ik in. T03 is een twijfelgeval: het model zegt onzeker, mijn verwachte antwoord is neutraal. Ik pas dat vóór een volgende run aan.
 
 ## Model en effort
-Mijn gok was dat Opus 5.5 het best scoort, maar dat het verschil binnen mijn foutmarge valt en dat Haiku 5.5 goed genoeg is. Uitkomst, 1 run per setup op 10 inputs: Sonnet 5.5 met effort medium haalde 8 op 10, Haiku 5.5 haalde 10 op 10 en Opus 5.5 haalde 10 op 10. Opus was dus niet beter dan Haiku, en Sonnet viel 1 punt onder mijn foutmarge. Per run kost Haiku $0,00042, Sonnet $0,00604 en Opus $0,01348. Mijn gok klopte dus half. Deze taak draait op Haiku 5.5, met standaard effort, omdat hij 10 op 10 haalde, net als Opus, en bij 1.100 runs per jaar $0,46 kost tegen $14,83 voor Opus.
+Mijn gok: Opus 5.5 scoort het best, het verschil valt binnen mijn foutmarge en Haiku 5.5 is goed genoeg. Uitkomst, 1 run per setup op 10 inputs: Sonnet 5.5 (effort medium) 8 op 10, Haiku 5.5 10 op 10, Opus 5.5 10 op 10. Per run kost Haiku $0,00042, Sonnet $0,00604 en Opus $0,01348. Mijn gok klopte half. Deze taak draait op Haiku 5.5, met standaard effort, omdat hij 10 op 10 haalde, net als Opus, en bij 1.100 runs per jaar $0,46 kost tegen $14,83 voor Opus.
 
 ## Mijn value chain, met de foutmarge erin
-Met de hand kost een bericht ongeveer 95 seconden (geschat, niet gemeten). Met de tool is het 43 tot 52,5 seconden. Ik volg ongeveer 5 berichten per werkdag, dus 1.100 per jaar. Het netto is ± €280 tot ± €342 per jaar. Mijn zwakste cijfer is de 95 seconden. Is het de helft, dan is het netto ± −€2 tot ± €29.
+Met de hand kost een bericht ongeveer 95 seconden (geschat). Met de tool is het 43 tot 52,5 seconden. Bij 5 berichten per werkdag is het netto ± €280 tot ± €342 per jaar. Mijn zwakste cijfer zijn die 95 seconden: bij de helft is het netto ± −€2 tot ± €29.
 
 | Schakel | Waarde | Bron |
 |---|---|---|
@@ -22,6 +22,13 @@ Met de hand kost een bericht ongeveer 95 seconden (geschat, niet gemeten). Met d
 | 8. Netto per jaar | 13 × 21,57 − 0,42 = **± €280** (9/10) · 15,9 × 21,57 − 0,42 = **± €342** (10/10) | berekend |
 | 9. Bereik | **± €280 tot ± €342 per jaar**. Midden (9,5/10): ± €311 | foutmarge |
 | 10. Zwakste cijfer | De 95 s met de hand: geschat, niet gemeten. Is het de helft (47,5 s), dan is het netto **± €29** (10/10) of **± −€2** (9/10), midden ± €14. Bij 9/10 wint de tool dan niets meer. Daarbij daalt ook het fouten herstellen, want dat is 10% van de handtijd. | geschat |
+
+## Mijn testset groeit
+Ik breidde mijn testset uit van 10 naar 30 inputs (set v2). De 20 nieuwe zijn echte berichten uit De Tijd en VRT NWS. De juiste antwoorden schreef ik op vóór ik draaide. Er zijn 13 gewone gevallen. Zes zijn randgevallen, zoals een lange alinea, tien onderwerpen in één bericht, een misleidend woord en afgebroken alinea's. Maar 2 hebben onzeker als antwoord, omdat ik er niet meer vond.
+
+De input die mijn tool het meest verraste is T27, omdat het model als enige van de zeven fouten "niet over defensie" koos.
+
+Mijn score is 23 op 30 (set v2, 1 run). Op T01–T10 is dat 10 op 10, op T11–T30 13 op 20. Zes van de zeven fouten zijn "onzeker" of "neutraal" waar ik positief of neutraal verwachtte, omdat de tekst geen budget of bestelling noemt.
 
 ## Mijn dashboard
 https://claude.ai/artifact/E19YfPwAF885qHUM1b3pz9
