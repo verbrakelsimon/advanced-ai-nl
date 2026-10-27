@@ -19,3 +19,5 @@
 
 ## Week 5
 - T03: model zegt onzeker, mijn verwachte antwoord is neutraal. Twijfelgeval, verwacht antwoord aanpassen vóór een volgende run, niet nu.
+- Set v2 (T01–T30), prompt v3, Haiku 5.5, `claude -p --tools ""`, elke input in een aparte sessie: 23 op 30 (set v2, 1 run). T01–T10: 10 op 10 (set v2, 1 run). T11–T30: 13 op 20 (set v2, 1 run). Verwachte antwoorden voor de run vastgelegd en niet aangepast, prompt niet aangepast.
+- Fouten bij T11–T30 (model zei, ik verwachtte): T11 neutraal, positief. T15 onzeker, neutraal. T16 onzeker, positief. T26 onzeker, neutraal. T27 niet over defensie, positief. T28 onzeker, positief. T29 onzeker, neutraal.

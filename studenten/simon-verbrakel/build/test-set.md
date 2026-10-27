@@ -42,3 +42,6 @@ Set v2: T01–T30, 27 oktober
 - T01 was eerst F5 (twijfelt) in beide runs, tot ik het juiste antwoord aanpaste naar onzeker. Het model had gelijk: de tekst noemt geen budget.
 
 **T08 voor en na de regel over gesprekken zonder akkoord:** voor de regel Run 1 negatief, Run 2 negatief (F1 in beide). Na de regel Run 1 negatief, Run 2 onzeker (F6, wisselend). Eén input, dus geen bewijs.
+
+
+**Set v2, prompt v3, Haiku 5.5 (27 oktober 2026):** 23 op 30 (set v2, 1 run). T01–T10: 10 op 10 (set v2, 1 run). T11–T30: 13 op 20 (set v2, 1 run). Antwoorden vooraf vastgelegd, niet aangepast.
