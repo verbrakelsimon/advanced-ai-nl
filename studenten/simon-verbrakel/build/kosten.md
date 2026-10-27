@@ -23,6 +23,8 @@ Bron: [Anthropic pricing](https://platform.claude.com/docs/en/about-claude/prici
 
 Controle: 2,6k × 0,10 + 1,2k × 0,50 + 24,8k × 0,01 + 16,4k × 0,20 per miljoen = $0,0044. Dat klopt met `/cost`.
 
+Gecorrigeerd in week 5: model gecheckt met `/model haiku`, dat geeft Haiku 5.5. Model en prijs ($0,10 input, $0,50 output per miljoen tokens, zelfde als de prijstabel van week 5) waren dus juist.
+
 ## Kost per run
 
 Jouw deel is alleen wat een bedrijf via de API zou sturen: je prompt, de input en het antwoord. De context van Claude Code (de 26,8k) en de cache horen daar niet bij.
@@ -30,6 +32,7 @@ Jouw deel is alleen wat een bedrijf via de API zou sturen: je prompt, de input e
 - Jouw deel: 2,6k input + 1,2k output = **3,8k tokens**
 - Kost: 2.600 × $0,10 / 1.000.000 + 1.200 × $0,50 / 1.000.000 = $0,00026 + $0,00060 = **$0,00086**
 - In euro (1 dollar = 0,90 euro, aanname): **€0,00077 per run**
+- Gecorrigeerd in week 5: herberekend op 2,6k input + 1,2k output met de prijs van Haiku 5.5 uit de tabel van week 5. Kost per run blijft **$0,00086**, per maand 600 × $0,00086 = **$0,52 (€0,46)**.
 
 | Model | Context (`/context`) | Totaal (`/cost`) | Jouw deel | Kost per run | Per maand, jouw volume | 10× | 1.000× |
 |---|---:|---:|---:|---:|---:|---:|---:|
