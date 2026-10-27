@@ -10,7 +10,7 @@
 
 Prompt v3 (`build/prompt.md`), 10 inputs uit `build/test-set.md`, 1 run per setup, elke run in een aparte sessie: `claude -p --model <model> [--effort medium] --tools "" --no-session-persistence`. Verwachte antwoorden niet aangepast. Mijn foutmarge uit `build/foutmarge.md` is 9–10 (Haiku 5.5, 3 runs per versie).
 
-| Setup | Model | Effort | Score (n = 10, 1 run) | Binnen mijn foutmarge? | Input-tokens per run (gemeten) | Output-tokens per run | Kost per run | Per jaar (7.200 runs, gecorrigeerd in week 5) | Per jaar (1.100 runs, gecorrigeerd in week 5) |
+| Setup | Model | Effort | Score (n = 10, 1 run) | Binnen mijn foutmarge? | Input-tokens per run (gemeten) | Output-tokens per run | Kost per run | Per jaar (7.200 runs, oud) | Per jaar (1.100 runs, gecorrigeerd in week 5) |
 |---|---|---|---:|---|---:|---:|---:|---:|---:|
 | A | Claude Sonnet 5.5 | medium | 8/10 | Nee, 1 punt onder het minimum van 9 | 6.120 | 83,8 | $0,00604 (€0,00544) | $43,47 (€39,13) | $6,64 (€5,98) |
 | B | Claude Haiku 5.5 | standaard (niet ingesteld) | 10/10 | Ja | 5.334 | 319,4 | $0,00042 (€0,00038) | $3,02 (€2,72) | $0,46 (€0,42) |
