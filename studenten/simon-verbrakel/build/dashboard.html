@@ -1,24 +1,29 @@
-<!doctype html>
-<html lang="nl">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dashboard defensienieuws-labeler</title>
+<meta name="claude:viewport-fit-sides" content="cover">
 <style>
 :root {
   --bg: #f6f7f9; --card: #ffffff; --text: #1b1f27; --muted: #5a6475; --line: #dfe3ea;
   --accent: #1f5fbf; --good: #1d7a45; --bad: #b3261e; --warn: #9a5b00; --track: #e8ebf1;
 }
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --bg: #111418; --card: #1b2027; --text: #eceff4; --muted: #a2adbd; --line: #2b323c;
     --accent: #7db0ff; --good: #5fd08f; --bad: #ff8a80; --warn: #f2b45a; --track: #2b323c;
+    color-scheme: dark;
   }
+}
+:root[data-theme="dark"] {
+  --bg: #111418; --card: #1b2027; --text: #eceff4; --muted: #a2adbd; --line: #2b323c;
+  --accent: #7db0ff; --good: #5fd08f; --bad: #ff8a80; --warn: #f2b45a; --track: #2b323c;
+  color-scheme: dark;
 }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--text);
-  font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
-main { max-width: 760px; margin: 0 auto; padding: 16px; }
+  font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  padding-block: 16px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+main { max-width: 760px; margin: 0 auto; }
 h1 { font-size: 1.4rem; margin: 8px 0 4px; }
 h2 { font-size: 1.1rem; margin: 0 0 10px; }
 p { margin: 0 0 8px; }
@@ -50,9 +55,9 @@ td.num, th.num { text-align: right; white-space: nowrap; }
 .src { color: var(--muted); font-size: .8rem; }
 footer { color: var(--muted); font-size: .8rem; padding: 4px 0 24px; }
 @media (min-width: 560px) { .cards { grid-template-columns: repeat(3, 1fr); } }
+th, td { min-width: 0; }
+.card, .cell { min-width: 0; }
 </style>
-</head>
-<body>
 <main>
   <h1>Dashboard: defensienieuws-labeler</h1>
   <p class="sub">Een tool die van een nieuwsbericht (kop en eerste alinea) zegt wat het betekent voor de vraag naar defensiebedrijven: positief, negatief, neutraal, niet over defensie of onzeker. Stand van 27 oktober 2026, week 5.</p>
@@ -175,5 +180,3 @@ footer { color: var(--muted); font-size: .8rem; padding: 4px 0 24px; }
 
   <footer>Alle cijfers komen uit de bestanden foutmarge, modellen, kosten en de value chain van week 5. Er staan geen testinputs op deze pagina.</footer>
 </main>
-</body>
-</html>

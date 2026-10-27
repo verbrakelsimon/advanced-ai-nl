@@ -1,8 +1,13 @@
-# Week 5
+# Week 5: Is mijn verbetering echt bewezen?
+
+## Mijn foutmarge
+Ik draaide mijn prompt van week 2 (v1) en mijn laatste prompt (v3) elk 3 keer op dezelfde 10 inputs, met Claude Haiku 5.5. v1 haalde 9, 10 en 9 op 10. v3 haalde 9, 9 en 10 op 10. Beide bereiken zijn 9 tot 10, dus ze overlappen. Mijn claim uit week 4 dat de vijf voorbeelden de score verbeterden, trek ik in. Het verschil valt binnen de foutmarge. T03 is een twijfelgeval: het model zegt onzeker, mijn verwachte antwoord is neutraal. Ik pas dat vóór een volgende run aan, niet nu.
+
+## Model en effort
+Mijn gok was dat Opus 5.5 het best scoort, maar dat het verschil binnen mijn foutmarge valt en dat Haiku 5.5 goed genoeg is. Uitkomst, 1 run per setup op 10 inputs: Sonnet 5.5 met effort medium haalde 8 op 10, Haiku 5.5 haalde 10 op 10 en Opus 5.5 haalde 10 op 10. Opus was dus niet beter dan Haiku, en Sonnet viel 1 punt onder mijn foutmarge. Per run kost Haiku $0,00042, Sonnet $0,00604 en Opus $0,01348. Mijn gok klopte dus half. Deze taak draait op Haiku 5.5, met standaard effort, omdat hij 10 op 10 haalde, binnen mijn foutmarge van 9 tot 10, en bij 1.100 runs per jaar $0,46 kost tegen $14,83 voor Opus.
 
 ## Mijn value chain, met de foutmarge erin
-
-Productiesetup: Haiku 5.5. Score uit `build/foutmarge.md`: v3 haalt 9 tot 10 op 10 (3 runs, n = 10). Alle bronnen: **gemeten**, **gevraagd** (aan iemand) of **geschat**.
+Met de hand kost een bericht ongeveer 95 seconden (geschat, niet gemeten). Met de tool is het 43 tot 52,5 seconden. Ik volg ongeveer 5 berichten per werkdag, dus 1.100 per jaar. Het netto is ± €280 tot ± €342 per jaar. Mijn zwakste cijfer is de 95 seconden. Is het de helft, dan is het netto ± −€2 tot ± €29.
 
 | Schakel | Waarde | Bron |
 |---|---|---|
@@ -18,8 +23,33 @@ Productiesetup: Haiku 5.5. Score uit `build/foutmarge.md`: v3 haalt 9 tot 10 op 
 | 9. Bereik | **± €280 tot ± €342 per jaar**. Midden (9,5/10): ± €311 | foutmarge |
 | 10. Zwakste cijfer | De 95 s met de hand: geschat, niet gemeten. Is het de helft (47,5 s), dan is het netto **± €29** (10/10) of **± −€2** (9/10), midden ± €14. Bij 9/10 wint de tool dan niets meer. Daarbij daalt ook het fouten herstellen, want dat is 10% van de handtijd. | geschat |
 
-**Wat beweegt het netto het meest?** De 95 s. Mijn foutmarge (9 tot 10 op 10) verschuift het netto met ± €62 per jaar. Als de handtijd de helft is, verschuift het netto met ± €300. Mijn zwakste cijfer weegt dus ongeveer vijf keer zwaarder dan de foutmarge.
+## Mijn dashboard
+https://claude.ai/artifact/E19YfPwAF885qHUM1b3pz9
 
-**Tweede zwak punt:** de uurkost. Ik ben geen werkgever. €21,57 is wat mijn tijd waard is tegen een studentenloon plus de factor 1,5, een aanname. Het bedrag is klein: bij 1.100 berichten per jaar gaat het om 13 tot 16 uur.
+Een lezer moet eerst zien dat mijn score 9 tot 10 op 10 is en dat mijn claim is ingetrokken.
 
-**Te doen:** handtijd meten met een stopwatch op enkele berichten.
+## Mijn AI-ismen
+
+> Week 1: "Koersen opvolgen in functie van de actualiteit: linken leggen met bijvoorbeeld nieuwe oorlogen, en advies geven om bijvoorbeeld in de wapenindustrie te investeren."
+
+Herschreven: Ik bouw een tool die per nieuwsbericht zegt of de vraag naar defensiebedrijven stijgt of daalt; beleggingsadvies geeft hij niet, en de beurskoers voorspelt hij niet.
+
+> Week 2: "Met deze tool zie je dat in een paar seconden."
+
+Herschreven: De tool wacht ongeveer 8 seconden op een label (gemeten), tegenover ongeveer 95 seconden met de hand (geschat).
+
+> Week 2: "Ik wil dat omdat er elke dag veel nieuws is over oorlog, de NAVO en defensiebudgetten, en het veel tijd kost om zelf in te schatten welk bericht echt iets verandert voor die bedrijven."
+
+Herschreven: Ik volg elke werkdag ongeveer 5 nieuwsberichten over defensie op en ik doe er zelf ongeveer 95 seconden over per bericht.
+
+> Week 2: "De fout zit niet in het model, maar in mijn keuze om alleen de kop en de eerste alinea te gebruiken."
+
+Herschreven: Bij T01 stond het budget pas in de tweede alinea, dus mijn prompt kon het niet zien en ik paste het verwachte antwoord aan naar onzeker.
+
+> Week 3: "Dit cijfer zegt dat de prompt goed werkt op deze vijf berichten en dat het model consistent is."
+
+Herschreven: Op T06 tot T10 had het model 8 van de 10 antwoorden juist. De enige fout was T08, in beide runs negatief.
+
+> Week 4: "De kosten zijn dus geen probleem, zelfs niet met het duurdere model."
+
+Herschreven: Bij 100 runs per maand kost Haiku 5.5 €0,08 en Sonnet 5.5 €1,55.
