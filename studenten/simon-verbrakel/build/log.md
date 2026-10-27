@@ -16,3 +16,6 @@
 - Wijziging: regel toegevoegd dat gesprekken zonder akkoord onzeker zijn. T08 opnieuw gedraaid: Run 1 negatief, Run 2 onzeker. De fout ging van F1 (zeker fout) naar F6 (wisselend). De regel helpt, maar niet altijd. Het woord 'productieve' trekt het model nog richting negatief. Dit is één input, dus het bewijst weinig.
 - Alle tien inputs gedraaid met de huidige prompt (T01 tot T05 nu ook): 17 op 20 juist (85%) (n = 10 inputs, 2 runs). Fouten: T01 in beide runs, F5 (onzeker, terwijl het juiste antwoord positief is; de alinea noemt geen budget), en T08 in 1 van 2 runs, F1.
 - Achteraf het juiste antwoord van T01 aangepast van positief naar onzeker. Reden: de kop en eerste alinea noemen geen budget of uitgaven. Mijn oude label kwam uit mijn eigen voorkennis over de NAVO-top, en dat verbiedt mijn taak. Het cijfer wordt daardoor 19 op 20 juist (95%) (n = 10 inputs, 2 runs). Het cijfer vóór de aanpassing was 17 op 20 (85%). Een label achteraf aanpassen maakt een cijfer mooier, dus ik meld het.
+
+## Week 5
+- T03: model zegt onzeker, mijn verwachte antwoord is neutraal. Twijfelgeval, verwacht antwoord aanpassen vóór een volgende run, niet nu.
